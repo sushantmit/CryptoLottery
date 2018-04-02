@@ -1,0 +1,296 @@
+{
+  "contractName": "Hasher",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "winNum",
+          "type": "uint256"
+        }
+      ],
+      "name": "hashMe",
+      "outputs": [
+        {
+          "name": "winhash",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b60ce8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806328abb94e146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506080565b60405180826000191660001916815260200191505060405180910390f35b60008160405180828152602001915050604051809103902090508090509190505600a165627a7a72305820bf54669b890dfe91b094c3d35352c7e69783fd17a3256da4d8375fcd10c72e700029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806328abb94e146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506080565b60405180826000191660001916815260200191505060405180910390f35b60008160405180828152602001915050604051809103902090508090509190505600a165627a7a72305820bf54669b890dfe91b094c3d35352c7e69783fd17a3256da4d8375fcd10c72e700029",
+  "sourceMap": "116:157:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "116:157:0:-;;;;;;;;;;;;;;;;;;;;;;;;138:133;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;186:15;233:6;223:17;;;;;;;;;;;;;;;;;;213:27;;257:7;250:14;;138:133;;;:::o",
+  "source": "pragma solidity ^0.4.16;\n\n// this contract can be used by owner on his side to calculate the hash of winning number\ncontract Hasher {\n    function hashMe(uint256 winNum) public returns (bytes32 winhash) {\n        winhash = keccak256(winNum);\n        return winhash;\n    }\n}",
+  "sourcePath": "/Users/sprasad/Desktop/Lottery/contracts/Hasher.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/sprasad/Desktop/Lottery/contracts/Hasher.sol",
+      "exportedSymbols": {
+        "Hasher": [
+          18
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            18
+          ],
+          "name": "Hasher",
+          "scope": 19
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "hashMe",
+              "payable": false,
+              "scope": 18,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "winNum",
+                      "scope": 17,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2,
+                        "name": "ElementaryTypeName",
+                        "src": "154:7:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "VariableDeclaration",
+                    "src": "154:14:0"
+                  }
+                ],
+                "id": 4,
+                "name": "ParameterList",
+                "src": "153:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "winhash",
+                      "scope": 17,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 5,
+                        "name": "ElementaryTypeName",
+                        "src": "186:7:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "VariableDeclaration",
+                    "src": "186:15:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ParameterList",
+                "src": "185:17:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6,
+                              "type": "bytes32",
+                              "value": "winhash"
+                            },
+                            "id": 8,
+                            "name": "Identifier",
+                            "src": "213:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bytes32",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 406,
+                                  "type": "function () pure returns (bytes32)",
+                                  "value": "keccak256"
+                                },
+                                "id": 9,
+                                "name": "Identifier",
+                                "src": "223:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3,
+                                  "type": "uint256",
+                                  "value": "winNum"
+                                },
+                                "id": 10,
+                                "name": "Identifier",
+                                "src": "233:6:0"
+                              }
+                            ],
+                            "id": 11,
+                            "name": "FunctionCall",
+                            "src": "223:17:0"
+                          }
+                        ],
+                        "id": 12,
+                        "name": "Assignment",
+                        "src": "213:27:0"
+                      }
+                    ],
+                    "id": 13,
+                    "name": "ExpressionStatement",
+                    "src": "213:27:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 6,
+                          "type": "bytes32",
+                          "value": "winhash"
+                        },
+                        "id": 14,
+                        "name": "Identifier",
+                        "src": "257:7:0"
+                      }
+                    ],
+                    "id": 15,
+                    "name": "Return",
+                    "src": "250:14:0"
+                  }
+                ],
+                "id": 16,
+                "name": "Block",
+                "src": "203:68:0"
+              }
+            ],
+            "id": 17,
+            "name": "FunctionDefinition",
+            "src": "138:133:0"
+          }
+        ],
+        "id": 18,
+        "name": "ContractDefinition",
+        "src": "116:157:0"
+      }
+    ],
+    "id": 19,
+    "name": "SourceUnit",
+    "src": "0:273:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-04-02T01:02:24.327Z"
+}
